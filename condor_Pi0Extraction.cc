@@ -54,7 +54,8 @@ void condor_Pi0Extraction(char *trigger, char *type, int startCC,int stopCC )
   const int NTOF = 3; //5 nano second and 3Sigma cut
   
   double ptl[NPT+1]; // Number of pt bins is 28, but the range with upper and lower bound is 29.
-  
+
+  gSystem->Load("libTHmul.so");   
   // setting all the number for Pt bins
   for(int i=0;i<NPT+1;i++) {
     if(i<21) ptl[i]=i*0.5;
