@@ -38,6 +38,9 @@ void Pi0EmbedFiles::Loop()
  double cent_h = cc*20+20;
  if(cc==4) {cent_l = 0.0;cent_h = 89;}
  if(cc==3) cent_h = 89;
+
+gSystem->Load("libTHmul.so");
+
  if (verbose)
    printf("processing %.2lf <= centrality < %.2lf\n",cent_l,cent_h);
 
